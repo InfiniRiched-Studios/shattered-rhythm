@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://backend/Conductor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/Player.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+dof_blur_far_quality = 2
+dof_blur_near_enabled = true
+dof_blur_near_distance = 0.1
+glow_enabled = true
+glow_intensity = 3.53
+glow_strength = 1.26
+glow_blend_mode = 1
+glow_bicubic_upscale = true
+
+[node name="GameState" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+pause_mode = 2
+environment = SubResource( 1 )
+
+[node name="PlayerTurret" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 280 )
+scale = Vector2( 2, 2 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 2 )]
+bpm = 160

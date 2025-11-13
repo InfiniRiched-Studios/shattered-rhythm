@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/regular_polygon2d_node/RegularPolygon2D.gd" type="Script" id=1]
+[ext_resource path="res://objects/Bullet.gd" type="Script" id=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+rough = true
+
+[node name="Bullet" type="RigidBody2D"]
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+script = ExtResource( 2 )
+
+[node name="bulletShape" type="Node2D" parent="."]
+script = ExtResource( 1 )
+centered = true
+size = 32.0
+border_size = 5.0
+border_color = Color( 1, 1, 1, 1 )
+polygon_rotation = 90.0
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+position = Vector2( 3, 0 )
+polygon = PoolVector2Array( -8, -8, 8, 0, -8, 8 )
+
+[node name="bulletarea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bulletarea"]
+polygon = PoolVector2Array( -8, -16, 16, 0, -8, 16 )
