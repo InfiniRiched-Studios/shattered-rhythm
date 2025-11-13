@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://objects/Player.gd" type="Script" id=1]
-[ext_resource path="res://objects/CannonUpper.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Cannon.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 50.0
@@ -9,11 +9,7 @@ radius = 50.0
 [node name="PlayerTurret" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="Body" type="Polygon2D" parent="."]
-color = Color( 0.176, 0.208, 0.38, 1 )
-polygon = PoolVector2Array( 128, 0, 121.55, 39.93, 103.14, 76.16, 74.99, 106.04, 39.93, 127.24, 0, 137.76, -39.93, 137.76, -76.16, 127.24, -106.04, 106.04, -127.24, 76.16, -137.76, 39.93, -140.8, 0, -137.76, -39.93, -127.24, -76.16, -106.04, -106.04, -76.16, -127.24, -39.93, -137.76, 0, -140.8, 39.93, -137.76, 76.16, -127.24, 106.04, -106.04, 127.24, -76.16, 137.76, -39.93, 140.8, 0 )
-
-[node name="CoreGlow" type="Polygon2D" parent="Body"]
+[node name="CoreGlow" type="Polygon2D" parent="."]
 modulate = Color( 0, 1, 1, 0.6 )
 color = Color( 0, 1, 1, 1 )
 polygon = PoolVector2Array( 40, 0, 38.04, 12.36, 32.36, 23.51, 23.51, 32.36, 12.36, 38.04, 0, 40, -12.36, 38.04, -23.51, 32.36, -32.36, 23.51, -38.04, 12.36, -40, 0, -38.04, -12.36, -32.36, -23.51, -23.51, -32.36, -12.36, -38.04, 0, -40, 12.36, -38.04, 23.51, -32.36, 32.36, -23.51, 38.04, -12.36 )

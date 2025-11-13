@@ -47,6 +47,10 @@ _global_script_class_icons={
 config/name="Shattered Rhythm"
 config/icon="res://icon.png"
 
+[autoload]
+
+chart_loader="*res://Scripts/ChartLoader.gd"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "regular_polygon2d_node" )

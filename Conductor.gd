@@ -113,5 +113,3 @@ func _on_finished():
 	"""Called when song ends"""
 	emit_signal("song_ended")
 	reset()
-
-# Add a Timer node as child named "StartTimer" in the scene for countdown functionality
